@@ -9,6 +9,9 @@ const app = express();
 app.use(express.json());
 
 connectDB();
+app.get("/", (req, res) => {
+  res.send("Concurrent Ticket Booking System is running 🚀");
+});
 
 app.use("/api", bookingRoutes);
 
